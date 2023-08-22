@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- navbar -->
+    <nav class="bg-slate-800 sticky top-0 text-white flex justify-around items-center p-6 rounded-sm">
+
+        <div class="font-['Pacifico','cursive'] text-3xl">
+            Myshop
+        </div>
+        <ul class="flex justify-between items-center w-5/12 text-2xl">
+            <li> <a th:href="@{home}" class="hover:text-slate-400"> <i
+                        class="fa-solid fa-house text-white mr-2"></i>Home</a>
+            </li>
+            <li> <a th:href="@{customer_home_login}" class="hover:text-slate-400"><i
+                        class="fa-solid fa-user text-white mr-2"></i>Login</a>
+            </li>
+            <li> <a th:href="@{merchant_home_register}" class="hover:text-slate-400">Become a seller</a> </li>
+            <li> <a href="#" class="hover:text-slate-400"> <i class="fa-solid fa-phone text-white mr-2"></i>Contact
+                    Us</a> </li>
+        </ul>
+    </nav>
+
+
+    <!-- form section-->
+    <section class="flex justify-around  mt-11">
+        <div class="flex items-center justify-center  px-64">
+            <div>
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    width="500px" height="400px" alt="">
+            </div>
+            <div class="flex flex-col items-center">
+                <p class="font-bold text-4xl">Sign Up</p>
+                <div class="px-24">
+                    <form th:action="@{customer_register}" class="flex flex-col mt-9">
+                        <div>
+                            <input type="hidden" name = "id">
+                        </div>
+                        <div class="relative">
+                            <input type="text" name="name" placeholder="Enter Your Name"
+                                class="py-3 pl-10 w-full text-blue-400 my-2 border border-slate-950 ">
+                                <i class="fa-solid fa-user absolute top-[40%] left-3 "></i>
+                        </div>
+                        <div class="relative">
+                            <input type="text" name="email" placeholder="Enter Your Email"
+                                class="py-3 pl-10 w-full text-blue-400 my-2 border border-slate-950 ">
+                                <i class="fa-solid fa-envelope absolute top-[40%] left-3"></i> 
+                        </div>
+                        <div class="relative">
+                            <input type="text" name="password" placeholder="Enter Your password"
+                                class="py-3 pl-10 w-full text-blue-400 my-2 border border-slate-950 ">
+                                <i class="fa-solid fa-lock absolute top-[40%] left-3 "></i>
+                        </div>
+                        <div class="relative">
+                            <input type="text" name="phone" placeholder="Enter Your Phone Number"
+                                class="py-3 pl-10 w-full text-blue-400 my-2 border border-slate-950 ">
+                                <i class="fa-solid fa-phone absolute top-[40%] left-3"></i>
+                        </div>
+                        <div class="relative">
+                            <input type="hidden" name="status">
+                        </div>
+
+                        <input type="submit" value="Sign Up"
+                            class="p-3 text-white bg-slate-900 hover:bg-slate-800 hover:text-slate-300 rounded-md my-4">
+                    </form>
+                    <p>Already have an account? <a th:href="@{customer_home_login}" class="text-[#3930d8] font-bold hover:text-blue-500">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

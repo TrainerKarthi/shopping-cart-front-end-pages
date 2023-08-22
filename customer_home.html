@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="bg-slate-800 sticky top-0 text-white flex justify-around items-center p-6 ">
+        <div class="font-['Pacifico','cursive'] text-3xl">
+            Myshop
+        </div>
+        <ul class="flex justify-between items-center w-5/12 text-2xl">
+            <li class="group"> <i class="fa-solid fa-house group-hover:text-slate-400 text-white mr-2"></i><a
+                    th:href="@{home}" class="group-hover:text-slate-400">Home</a>
+            </li>
+            <li class="group"> <i class="fa-solid fa-user text-white mr-2 group-hover:text-slate-400"></i><a href="#"
+                    class="group-hover:text-slate-400">Profile</a>
+            </li>
+            <li class="group"> <i class="fa-solid fa-phone text-white mr-2 group-hover:text-slate-400"></i><a href="#"
+                    class="group-hover:text-slate-400"> Contact
+                    Us</a> </li>
+            <li class="group"> <i class="fa-solid fa-cart-shopping text-white mr-2 group-hover:text-slate-400"></i><a
+                    th:href="#" class="group-hover:text-slate-400">
+                    Cart</a> </li>
+        </ul>
+    </nav>
+    <!-- sub nav bar -->
+
+    <head>
+        <ul class="flex justify-around text-white bg-slate-600 text-lg h-14 items-center">
+            <li> <a href="#" class="hover:text-slate-800">Men's Wear</a></li>
+            <li> <a href="#" class="hover:text-slate-800">Ladies Wear</a> </li>
+            <li> <a href="#" class="hover:text-slate-800">Shoes</a> </li>
+            <li> <a href="#" class="hover:text-slate-800">Sandles</a> </li>
+            <li> <a href="#" class="hover:text-slate-800">Mobiles</a> </li>
+            <li> <a href="#" class="hover:text-slate-800">Laptops</a> </li>
+            <li> <a href="#" class="hover:text-slate-800">Televisions</a> </li>
+        </ul>
+    </head>
+
+    <!-- Section -->
+    <section>
+
+        <div class="flex">
+            <div>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
